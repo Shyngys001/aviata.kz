@@ -1,0 +1,38 @@
+{% extends 'main/base2.html'%}
+
+{% block title %}
+{{ title }}
+{% endblock%}
+
+{% block content %}
+<div class="p-4 p-md-5 mb-4 rounded text-bg-dark oness"  style="background-image: url(https://s3.eu-central-1.amazonaws.com/aviata-blog-2.0/posts/thumbnails/2_c16505122342a5cfe3cda8b953366c7d4c576e64.webp); background-size: 65%; background-size: cover;">
+    <div class="col-md-6 px-0" >
+      <h1 class="display-4 fst-italic">Все отзывы наших клиентов</h1>
+      <p class="lead my-3">Полезно для новых клиентов</p>
+      <p class="lead mb-0"><a href="https://aviata.kz/media/?utm_source=av-aviata&utm_medium=hedar-desktop&utm_campaign=hedar-menu" class="text-white fw-bold">Continue reading...</a></p>
+
+    </div>
+  </div>
+{% if tasks %}
+    <div class="shyn" style="display: flex;
+    flex-wrap: wrap">
+        {% for el in tasks %}
+            <div class="col-md-6" style="padding: 5px">
+              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-0 shadow-sm h-md-100 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <h3 class="mb-0">{{ el.titles }}</h3>
+                  <p class="card-text mb-auto">{{ el.tasks }}</p>
+                  <a href="#" class="stretched-link">Continue reading</a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <img src="https://s3.eu-central-1.amazonaws.com/aviata-blog-2.0/posts/thumbnails/1_55b60947877ed026eac29f427517f3f3cd29126c.webp" alt="avia" class="shynny" style="width: 220px;">
+                </div>
+              </div>
+            </div>
+    {% endfor %}
+    </div>
+
+{% else %}
+    <h1>НОВОСТЕЙ НЕТ! СОЗДАВАЙ!</h1>
+{% endif %}
+{% endblock %}

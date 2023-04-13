@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <script src="aviata.js"></script>
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+<style>
+    header {
+    background-color: #3b3b3b;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    font-size: 1.3rem;
+
+}
+
+body {
+    background-color: #ffffff;
+}
+
+.header-left {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+}
+
+.header-right { 
+    display: flex;
+    justify-content: space-around;
+}
+
+.header-right a img {
+    margin-left: 5px;
+    width: 15px;
+    height: 15px;
+}
+
+.header-right a {
+    align-items: center;
+}
+
+
+.all{
+    background-color: #fff;
+    height: 1900px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 6%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.main {
+    background-color: #ffffff;
+    width: 83%;
+    display: block;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    justify-content: space-between;
+}
+
+.f {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main img{
+    width: 20%;
+}
+
+footer {
+    background-color: #080808;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem;
+    font-size: 1.3rem;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+    
+
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    display: flexbox;
+    justify-content: center;
+}
+
+.footer-center{
+    width: 30%;
+}
+
+.footer-center .icons{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-center .icons img{
+    width: 45%;
+}
+
+.footer-center p{
+    font-size: 1rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.footer-right p{
+    font-size: 1rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.footer-right{
+    width: 30%;
+}
+
+.footer-left img{
+    width: 100%;
+}
+
+.footer-left .icons{
+    display: flex;
+    width: 30%;
+}
+
+.footer-left p{
+    font-size: 1rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    footer {
+        font-size: 1.5rem;
+    }
+}
+
+
+.second{
+    background-color: #ffffff;
+    width: 83%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+
+.second h1{
+    font-size: 2.7rem;
+}
+
+nav {
+    background-color: #3b3b3b;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 1.3rem;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin: 0 10px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+
+
+
+  /* corusel */
+
+  .slider-container {
+    position: relative;
+    overflow: hidden;
+    background-color: #3b3b3b;
+    border-radius: 2%;
+    width: 70%;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+
+  }
+  
+  .slider {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .dots-container {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #bbb;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background-color: #ffffff;
+  }
+  /* corusel */
+
+
+
+  .third{
+    margin: 0 auto;
+    display: flex;
+    width: 90%;
+    background-color: #333;
+    padding: 20px;
+  }
+
+  .fourth{
+    width: 90%;
+    padding: 20px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  .fourth .card{
+    width: 29%;
+    border-radius: 2rem;
+    align-items: center;
+  }
+
+  .fourth .card-img-top{
+    border-color: #333;
+    width: 30%;
+  }
+
+  .fourth .btn-primary{
+
+    margin: 0 auto;
+  }
+
+  /* slide */
+  /* .slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .mySlides {
+    display: none;
+  }
+  
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .dot-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 8px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1s;
+    animation-name: fade;
+    animation-duration: 1s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {
+      opacity: .4
+    }
+  
+    to {
+      opacity: 1
+    }
+  }
+  
+  @keyframes fade {
+    from {
+      opacity: .4
+    }
+  
+    to {
+      opacity: 1
+    }
+  }
+   */
+  /* slide */
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
+    color: #bf7575;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 12px 16px;
+}
+
+.dropdown-menu li:hover {
+    background-color: #fffdfd;
+}
+
+
+.fifth{
+  background-color: antiquewhite;
+  margin: 0 auto;
+  width: 90%;
+  padding: 20px;
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fifth .fs1{
+  display: block;
+  width: 30%;
+}
+
+.fifth .fs{
+  display: flex;
+}
+
+.fifth .ft{
+  background-color: #ffffff;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-AROUND;
+}
+
+.fifth .ft3{
+  display: flex;
+}
+
+.fifth .icons{
+  display: flex;
+}
+
+.fifth .icons .gp{
+  display: flex;
+  justify-content: space-between;
+}
+
+.fifth .icons .gp img{
+  width: 30%;
+  height: 30px;
+}
+
+.fifth .ft3 img, .gp img{
+  width: 7%;
+}
+
+</style>
+</head>
+<body>
+
+{% extends 'main/base.html' %}
+{% block title %}
+{{ title }}
+{% endblock%}
+
+{% block content %}
+    <header>
+		<div class="header-left">
+			<nav>
+                <ul>
+                  <li><a href="#">Авиабилеты</a></li>
+                  <li><a href="#">Билеты на поезд</a></li>
+                  <li><a href="#">Отели</a></li>
+                  <li><a href="#">Для бизнеса</a></li>
+                  <li><a href="#">Бонусы</a></li>
+                  <li><a href="{% url 'feedback' %}">Отзывы</a></li>
+                </ul>
+              </nav>
+		</div>
+		<div class="header-right">
+            <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="#">Русский <img src="down.png" alt="down arrow"></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Қазақша</a></li>
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">Turkce</a></li>
+                    </ul>
+                </li>
+			    <li><a href="#"><img src="user.png" alt="user"> Личный кабинет</a></li>
+            </ul>
+        </nav>
+		</div>
+	</header>
+
+    <div class="all">
+        <div class="main">
+            <img src="https://aviax.cdn.aviata.me/releases/1.26.0/assets/aviata-minimal.a06e2cfe.svg" alt="">
+            <div class="f">
+                <p>Авиата - лидер по продаже билетов в Казахстане</p>
+                <p>по данным журнала FORBES,Kazakhstan , сентябрь 2020</p>
+            </div>
+            <p>обмен или возврат</p>
+        </div>
+
+        <div class="second">
+            <h1><b> Купить или забронировать авиабилеты онлайн в Казахстане</b></h1>
+            
+        </div>
+            
+        <div class="third">
+            <div class="slide">
+                <div class="slider-container">
+                  <div class="slider">
+                      <img src="https://tpc.googlesyndication.com/simgad/17856205837992602348" alt="Image 1">
+                      <img src="https://tpc.googlesyndication.com/simgad/18338951529189725450" alt="Image 2">
+                      <img src="https://tpc.googlesyndication.com/simgad/6764337782689897357" alt="Image 3">
+                  </div>
+                  <div class="dots-container">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                  </div>
+                </div>
+        </div>
+    </div>
+
+    <div class="fourth">
+        <div class="card">
+            <img class="card-img-top" src="https://aviax.cdn.aviata.me/releases/1.26.0/assets/anywhere.49239dcd.svg" alt="Card image">
+            <div class="card-body">
+              <h4 class="card-title">Ищите варианты с поиском «Куда угодно»</h4>
+              <p class="card-text">Покажет, в какой день лететь выгоднее и подскажет лучшее время для путешествия.</p>
+              <a href="#" class="btn btn-secondary">Узнать</a>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="https://aviax.cdn.aviata.me/releases/1.26.0/assets/loan.0a2cfe72.svg" alt="Card image">
+            <div class="card-body">
+              <h4 class="card-title">Гарантия возврата 90% от стоимости билета</h4>
+              <p class="card-text">Оплатите 10% и верните 90% от стоимости билета</p>
+              <a href="#" class="btn btn-secondary">Узнать</a>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="https://aviax.cdn.aviata.me/releases/1.26.0/assets/cashback.955609f9.svg" alt="Card image">
+            <div class="card-body">
+              <h4 class="card-title">Кешбэк в приложении «Choco»</h4>
+              <p class="card-text">Получайте кешбэк c каждой покупки при оплате через приложение "Choco".</p>
+              <a href="#" class="btn btn-secondary">Узнать</a>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="https://aviax.cdn.aviata.me/releases/1.26.0/assets/tour.e0290d31.svg" alt="Card image">
+            <div class="card-body">
+              <h4 class="card-title">Оплата через Apple pay и Google pay</h4>
+              <p class="card-text">Оплачивайте билеты удобным способом в один клик</p>
+              <a href="#" class="btn btn-secondary">Узнать</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="fifth">
+        <div class="fs">
+            <div class="fs1">
+                <p><b>Надёжное авиа-агентствоb</b></p>
+                <p>У нас большой опыт работы в области авиаперевозок и работы как с частными клиентами, так и с крупными компаниями.</p>
+            </div>
+            <div class="fs1">
+                <p><b>Дешёвые авиабилеты</b></p>
+                <p>Мы предлагаем максимально дешёвые авиабилеты без наценок на любые направления более чем 300 авиакомпаний.</p>
+            </div>
+            <div class="fs1">
+                <p><b>Купить билеты легко</b></p>
+                <p>С нашим онлайн-сервисом можно легко выбрать нужный авиарейс и купить билеты, оплатив картой любого банка мира.</p>
+            </div>
+        </div>
+
+        <div class="ft">
+            <img src="https://aviax.cdn.aviata.me/releases/1.26.0/assets/mobileapp.5ddbe65f.webp" alt="asa">
+            <div class="ft1">
+                <p>Получайте максимум с нашим мобильным приложением</p>
+                <div class="ft3">
+                    <img src="https://aviax.cdn.aviata.me/releases/1.26.0/assets/check-green-new.44366347.svg" alt="">
+                    <p>Просматривайте заказы онлайн</p>
+                </div>
+                <div class="ft3">
+                    <img src="https://aviax.cdn.aviata.me/releases/1.26.0/assets/check-green-new.44366347.svg" alt="">
+                    <p>Загружайте дорожную квитанцию</p>
+                </div><div class="ft3">
+                    <img src="https://aviax.cdn.aviata.me/releases/1.26.0/assets/check-green-new.44366347.svg" alt="">
+                    <p>Уведомления о путешествиях</p>
+                </div><div class="ft3">
+                    <img src="https://aviax.cdn.aviata.me/releases/1.26.0/assets/check-green-new.44366347.svg" alt="">
+                    <p>Упрощенное бронирование</p>
+                </div>
+                <div class="icons">
+                    <div class="gp">
+                        <img src="https://aviax.cdn.aviata.me/releases/1.26.0/assets/google-play.e84ce0b6.svg" alt="">
+                        <p>Google play</p>
+                    </div>
+                    <div class="gp">
+                        <img src="https://aviax.cdn.aviata.me/releases/1.26.0/assets/app-store.d6a0a26e.svg" alt="">
+                        <p>App store</p>
+                    </div>
+                    <div class="gp">
+                        <img src="https://aviax.cdn.aviata.me/releases/1.26.0/assets/appgallery.f4a5b9c7.svg" alt="">
+                        <p>AppGallery</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+
+        
+
+    <!-- <footer>
+        <div class="footer-left">
+            <img src="https://aviax.cdn.aviata.me/releases/1.26.0/assets/aviata-white-green.554cf697.svg" alt="">
+            <p><b> О компании</b></p>
+            <p>Публичная оферта</p>
+            <p>Вакансии</p>
+            <p>Контакты</p>
+            <div class="icons">
+                <img src="https://aviax.cdn.aviata.me/releases/1.26.0/assets/instagram-icon.6d509383.svg" alt="">
+                <img src="https://aviax.cdn.aviata.me/releases/1.26.0/assets/youtube-icon.2d4ad397.svg" alt="">
+                <img src="https://aviax.cdn.aviata.me/releases/1.26.0/assets/facebook-icon.53c62c05.svg" alt="">
+                <img src="https://aviax.cdn.aviata.me/releases/1.26.0/assets/twitter-icon.c1943575.svg" alt="">
+            </div>
+
+        </div>
+        <div class="footer-center">
+            <img src="https://aviax.cdn.aviata.me/releases/1.26.0/assets/iata.17583925.svg" alt="">
+            <p><b> Агентство аккредитовано сертификатом IATA Code 65321830</b></p>
+            <p>Отмечены международным знаком качества. Гарантия безопасности.</p>
+            <div class="icons">
+                <img src="https://aviax.cdn.aviata.me/releases/1.26.0/assets/astana-hub.617c56e4.webp" alt="">
+                <img src="https://aviax.cdn.aviata.me/releases/1.26.0/assets/deposit-photos.092541ea.webp" alt="">
+            </div>
+        </div>
+        <div class="footer-right">
+            <img src="https://aviax.cdn.aviata.me/releases/1.26.0/assets/forbes.15d5c3d1.webp" alt="">
+            <p><b> Авиата — лидер по продаже билетов в Казахстанe</b></p>
+            <p>По данным журнала Forbes Kazakhstan, сентябрь 2020</p>
+            <p>ТОО «Aviata» © 2010—2023</p>
+        </div>
+    </footer> -->
+
+    {% endblock %}
+</body>
+</html>

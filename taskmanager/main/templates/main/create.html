@@ -1,0 +1,22 @@
+{% extends 'main/base2.html'%}
+
+{% block title %}
+CREATE
+{% endblock%}
+
+{% block content %}
+            {% if request.user.is_authenticated %}
+                <h1>Оставьте свои предложения</h1>
+                <form method="post">
+                    {% csrf_token %}
+                        {{ form.titles }}<br>
+                        {{ form.tasks }}<br>
+                        <button type="submit" class="btn btn-success">Отправить</button>
+                    <span>{{ error }}</span>
+                </form>
+
+                {% else %}
+
+                    <h1>Please, <a href="{% url 'login' %}">login</a></h1>
+            {% endif %}
+{% endblock %}

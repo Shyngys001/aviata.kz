@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'taskmanager/index.css' %}">
+    <link rel="stylesheet" href="main/aviata.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="p-3 text-bg-dark">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <a href="{% url 'home' %}" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <!-- <img src="https://cdn.worldvectorlogo.com/logos/forbes-2.svg" alt="al" style="height:40px"> -->
+          
+        </a>
+        <li><a href="{% url 'home' %}" class="nav-link px-2">Авиабилеты</a></li>
+        <li><a href="{% url 'home' %}" class="nav-link px-2">Билеты на поезд</a></li>
+        <li><a href="{% url 'home' %}" class="nav-link px-2">Отели</a></li>
+        <li><a href="{% url 'home' %}" class="nav-link px-2">Для бизнеса</a></li>
+        <li><a href="{% url 'home' %}" class="nav-link px-2">Бонусы</a></li>
+        <li><a href="{% url 'home' %}" class="nav-link px-2">Блог</a></li>
+        <li><a href="{% url 'feedback' %}"class="nav-link px-2">Отзывы</a></li>
+        
+
+        </ul>
+        <div class="text-end">
+            {% if request.user.is_authenticated %}
+            <button type="button" class="btn btn-outline-light me-2">{{user.username}}</button>
+
+            <a href="{% url 'logout' %}">
+                <button type="button" class="btn btn-warning">Logout</button>
+            </a>
+            {% else %}
+
+            <a href="{% url 'login' %}">
+                <button type="button" class="btn btn-outline-light me-2">Login</button>
+            </a>
+            <a href="{% url 'register' %}">
+                <button type="button" class="btn btn-warning">Sign-up</button>
+            </a>
+            {% endif %}
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+<div class="container" style="padding-top: 20px">
+    {% block content%}
+
+    {% endblock%}
+</div>
+
+<!-- <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+      <span class="mb-3 mb-md-0 text-body-secondary">© 2023 Shyn Company, Inc</span>
+
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex" style="padding-right: 40px">
+        <a href="vk.com/" style="padding-right: 20px">
+            <button class="btn btn-primary rounded-pill px-3" type="button">VK</button>
+        </a>
+        <a href="https://www.instagram.com//">
+            <button class="btn btn-danger rounded-pill px-3" type="button">Instagram</button>
+        </a>
+
+    </ul>
+  </footer> -->
+
+  <footer>
+    <div class="footer-left">
+        <img src="https://aviax.cdn.aviata.me/releases/1.26.0/assets/aviata-white-green.554cf697.svg" alt="">
+        <p><b> О компании</b></p>
+        <p>Публичная оферта</p>
+        <p>Вакансии</p>
+        <p>Контакты</p>
+        <div class="icons">
+            <img src="https://aviax.cdn.aviata.me/releases/1.26.0/assets/instagram-icon.6d509383.svg" alt="">
+            <img src="https://aviax.cdn.aviata.me/releases/1.26.0/assets/youtube-icon.2d4ad397.svg" alt="">
+            <img src="https://aviax.cdn.aviata.me/releases/1.26.0/assets/facebook-icon.53c62c05.svg" alt="">
+            <img src="https://aviax.cdn.aviata.me/releases/1.26.0/assets/twitter-icon.c1943575.svg" alt="">
+        </div>
+
+    </div>
+    <div class="footer-center">
+        <img src="https://aviax.cdn.aviata.me/releases/1.26.0/assets/iata.17583925.svg" alt="">
+        <p><b> Агентство аккредитовано сертификатом IATA Code 65321830</b></p>
+        <p>Отмечены международным знаком качества. Гарантия безопасности.</p>
+        <div class="icons">
+            <img src="https://aviax.cdn.aviata.me/releases/1.26.0/assets/astana-hub.617c56e4.webp" alt="">
+            <img src="https://aviax.cdn.aviata.me/releases/1.26.0/assets/deposit-photos.092541ea.webp" alt="">
+        </div>
+    </div>
+    <div class="footer-right">
+        <img src="https://aviax.cdn.aviata.me/releases/1.26.0/assets/forbes.15d5c3d1.webp" alt="">
+        <p><b> Авиата — лидер по продаже билетов в Казахстанe</b></p>
+        <p>По данным журнала Forbes Kazakhstan, сентябрь 2020</p>
+        <p>ТОО «Aviata» © 2010—2023</p>
+    </div>
+</footer>
+
+
+
+</body>
+</html>
+
